@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply Online | Kreamorn Investments</title>
+  <meta name="description" content="Submit your Kreamorn Investments loan application online." />
+  <meta property="og:title" content="Apply Online | Kreamorn Investments" />
+  <meta property="og:description" content="Submit your Kreamorn Investments loan application online." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/og-default.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">Kreamorn <span>Investments</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="apply.html">Apply Online</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a class="btn btn-primary" href="apply.html">Apply Online</a>
+    </nav>
+  </div>
+</header>
+<main><section class="hero"><div class="container"><h1>Apply Online</h1><p>Complete your application securely. Our team will assess and respond promptly.</p></div></section>
+<section><div class="container"><div class="form-wrapper reveal">
+<form id="loanApplicationForm" novalidate>
+  <h2>Applicant Details</h2>
+  <div class="grid grid-2">
+    <div class="form-group"><label for="fullName">Full Name</label><input id="fullName" name="fullName" required /></div>
+    <div class="form-group"><label for="idNumber">ID Number</label><input id="idNumber" name="idNumber" required /></div>
+    <div class="form-group"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required /></div>
+    <div class="form-group"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+    <div class="form-group"><label for="address">Residential Address</label><input id="address" name="address" required /></div>
+    <div class="form-group"><label for="branch">Preferred Branch</label><select id="branch" name="branch" required><option value="">Select branch</option><option>Harare</option><option>Bulawayo</option><option>Mutare</option><option>Gweru</option><option>Masvingo</option><option>Other</option></select></div>
+  </div>
+
+  <h2>Loan Details</h2>
+  <div class="grid grid-2">
+    <div class="form-group"><label for="loanType">Loan Type</label><select id="loanType" name="loanType" required><option value="">Select type</option><option value="salary">Salary</option><option value="business">Business</option></select></div>
+    <div class="form-group"><label for="loanAmount">Loan Amount Requested</label><input id="loanAmount" name="loanAmount" type="number" min="1" required /></div>
+    <div class="form-group"><label for="repaymentPeriod">Preferred Repayment Period (months)</label><input id="repaymentPeriod" name="repaymentPeriod" type="number" min="1" required /></div>
+  </div>
+
+  <div id="salaryFields" hidden>
+    <h3>Salary Loan Information</h3>
+    <div class="grid grid-2">
+      <div class="form-group"><label for="employerName">Employer Name</label><input id="employerName" name="employerName" /></div>
+      <div class="form-group"><label for="position">Position</label><input id="position" name="position" /></div>
+      <div class="form-group"><label for="monthlySalary">Monthly Salary</label><input id="monthlySalary" name="monthlySalary" type="number" min="0" /></div>
+      <div class="form-group"><label for="employmentDuration">Employment Duration</label><input id="employmentDuration" name="employmentDuration" placeholder="e.g. 3 years" /></div>
+    </div>
+  </div>
+
+  <div id="businessFields" hidden>
+    <h3>Business Loan Information</h3>
+    <div class="grid grid-2">
+      <div class="form-group"><label for="businessName">Business Name</label><input id="businessName" name="businessName" /></div>
+      <div class="form-group"><label for="businessSector">Business Sector</label><input id="businessSector" name="businessSector" /></div>
+      <div class="form-group"><label for="yearsOperating">Years Operating</label><input id="yearsOperating" name="yearsOperating" type="number" min="0" /></div>
+      <div class="form-group"><label for="monthlyTurnover">Estimated Monthly Turnover</label><input id="monthlyTurnover" name="monthlyTurnover" type="number" min="0" /></div>
+    </div>
+  </div>
+
+  <h2>Document Uploads</h2>
+  <div class="grid grid-2">
+    <div class="form-group"><label for="idUpload">ID Upload</label><input id="idUpload" name="idUpload" type="file" required /></div>
+    <div class="form-group"><label for="payslipUpload">Payslip Upload (required for Salary Loan)</label><input id="payslipUpload" name="payslipUpload" type="file" /></div>
+    <div class="form-group"><label for="bankStatementUpload">Bank Statement Upload</label><input id="bankStatementUpload" name="bankStatementUpload" type="file" required /></div>
+    <div class="form-group"><label for="proofResidenceUpload">Proof of Residence Upload</label><input id="proofResidenceUpload" name="proofResidenceUpload" type="file" required /></div>
+    <div class="form-group"><label for="businessDocsUpload">Business Docs Upload (Business only)</label><input id="businessDocsUpload" name="businessDocsUpload" type="file" /></div>
+  </div>
+
+  <div class="form-group"><label><input type="checkbox" name="consent" required /> I confirm the information is accurate and consent to processing in line with Kreamorn policy.</label></div>
+  <div class="honeypot"><label for="websiteField">Do not fill</label><input id="websiteField" name="website" autocomplete="off" /></div>
+  <button class="btn btn-primary" type="submit">Submit Application</button>
+  <a class="btn btn-whatsapp" data-whatsapp-link href="#">WhatsApp Now</a>
+  <div id="applyStatus" class="status-message" role="status" aria-live="polite"></div>
+</form>
+</div></div></section></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Kreamorn Investments (Pvt) Ltd</h3>
+      <p>Kreamorn Investments is incorporated in Zimbabwe as a limited liability company and is a registered Microfinance Institution.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Useful Links</h3>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="apply.html">Apply Online</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="responsible-lending.html">Responsible Lending</a>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><a data-contact-link="phone" href="#"><span data-contact="phone"></span></a></p>
+      <p><a data-contact-link="email" href="#"><span data-contact="email"></span></a></p>
+      <p><span data-contact="address"></span></p>
+      <a class="btn btn-whatsapp" data-whatsapp-link href="#">WhatsApp Now</a>
+    </div>
+  </div>
+  <div class="container copy">© <span id="year"></span> Kreamorn Investments (Pvt) Ltd. All rights reserved.</div>
+</footer>
+<a class="btn btn-whatsapp floating-whatsapp" data-whatsapp-link href="#" aria-label="Chat on WhatsApp">WhatsApp</a>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+<script src="js/apply.js"></script>
+</body>
+</html>
