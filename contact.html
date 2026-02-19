@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Kreamorn Investments</title>
+  <meta name="description" content="Contact Kreamorn Investments by form, phone, email or WhatsApp." />
+  <meta property="og:title" content="Contact Us | Kreamorn Investments" />
+  <meta property="og:description" content="Contact Kreamorn Investments by form, phone, email or WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/og-default.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">Kreamorn <span>Investments</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="apply.html">Apply Online</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a class="btn btn-primary" href="apply.html">Apply Online</a>
+    </nav>
+  </div>
+</header>
+<main><section class="hero"><div class="container"><h1>Contact Us</h1><p>Speak with our team for loan support, eligibility guidance and branch assistance.</p></div></section>
+<section><div class="container grid grid-2"><div class="form-wrapper reveal"><h2>Send a Message</h2><form id="contactForm" novalidate><div class="form-group"><label for="contactName">Name</label><input id="contactName" name="name" required /></div><div class="form-group"><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" required /></div><div class="form-group"><label for="contactPhone">Phone</label><input id="contactPhone" name="phone" type="tel" required /></div><div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div><button class="btn btn-primary" type="submit">Send Message</button><div id="contactStatus" class="status-message" role="status" aria-live="polite"></div></form></div>
+<div class="card reveal"><h2>Contact Details</h2><p><strong>Phone:</strong> <a data-contact-link="phone" href="#"><span data-contact="phone"></span></a></p><p><strong>Email:</strong> <a data-contact-link="email" href="#"><span data-contact="email"></span></a></p><p><strong>Address:</strong> <span data-contact="address"></span></p><p><a class="btn btn-whatsapp" data-whatsapp-link href="#">WhatsApp Now</a></p></div></div></section></main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>Kreamorn Investments (Pvt) Ltd</h3>
+      <p>Kreamorn Investments is incorporated in Zimbabwe as a limited liability company and is a registered Microfinance Institution.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Useful Links</h3>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="apply.html">Apply Online</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="responsible-lending.html">Responsible Lending</a>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><a data-contact-link="phone" href="#"><span data-contact="phone"></span></a></p>
+      <p><a data-contact-link="email" href="#"><span data-contact="email"></span></a></p>
+      <p><span data-contact="address"></span></p>
+      <a class="btn btn-whatsapp" data-whatsapp-link href="#">WhatsApp Now</a>
+    </div>
+  </div>
+  <div class="container copy">© <span id="year"></span> Kreamorn Investments (Pvt) Ltd. All rights reserved.</div>
+</footer>
+<a class="btn btn-whatsapp floating-whatsapp" data-whatsapp-link href="#" aria-label="Chat on WhatsApp">WhatsApp</a>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
